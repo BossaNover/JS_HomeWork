@@ -12,9 +12,7 @@
 
  Другими словами: функция должна возвращать в неизменном виде то, что поступает ей на вход
  */
-function returnFirstArgument(value) {
-  return value;
-}
+function returnFirstArgument(value) {}
 
 /*
  Задание 2:
@@ -30,9 +28,7 @@ function returnFirstArgument(value) {
  Пример:
    sumWithDefaults(10) вернет 110
  */
-function sumWithDefaults(a, b = 100) {
-  return a + b;
-}
+function sumWithDefaults(a, b) {}
 
 /*
  Задание 3:
@@ -42,9 +38,7 @@ function sumWithDefaults(a, b = 100) {
  Пример:
    returnFnResult(() => 'привет') вернет 'привет'
  */
-function returnFnResult(fn) {
-  return fn();
-}
+function returnFnResult() {}
 
 /*
  Задание 4:
@@ -59,9 +53,7 @@ function returnFnResult(fn) {
    console.log(f()); // выведет 12
    console.log(f()); // выведет 13
  */
-function returnCounter(number = 0) {
-  return () => ++number;
-}
+function returnCounter() {}
 
 /*
  Задание 5 *:
@@ -72,11 +64,7 @@ function returnCounter(number = 0) {
  Пример:
    returnArgumentsArray(1, 2, 3) вернет [1, 2, 3]
  */
-function returnArgumentsArray() {
-  return [...arguments]; //спред-оператор
-
-  //returnArgumentsArray(...args) {return args} -- rest arguments
-}
+function returnArgumentsArray() {}
 
 /*
  Задание 6 *:
@@ -93,10 +81,7 @@ function returnArgumentsArray() {
 
    console.log(newSum()) выведет 6
  */
-function bindFunction(fn, ...args) {
-  return fn.bind(null, ...args); //контекст null
-  // return ()=> fn(...args);  //"заспредить" аргументы внутри функции
-}
+function bindFunction() {}
 
 export {
   returnFirstArgument,
