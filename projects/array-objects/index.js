@@ -88,7 +88,7 @@ function createProxy(obj) {
     set(obj, key, value) {
       obj[key] = value ** 2;
       return true;
-    }, /// ПОЧЕМУ ЗДЕСБ ЗАПЯТАЯ?
+    }, /// ПОЧЕМУ ЗДЕСЬ ЗАПЯТАЯ?
   });
 }
 
