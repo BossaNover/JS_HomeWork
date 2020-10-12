@@ -54,7 +54,7 @@ function findAllPSiblings(where) {
 
   for (const elem of where.children) {
     if (elem.nextElementSibling && elem.nextElementSibling.tagName === 'P') {
-      //если след.эл-т существует и имя его тега "P", писать с большой буквы!
+      //если след.эл-т существует и имя его тега "P", писать с большой буквы
       resultArray.push(elem);
     }
   }
