@@ -25,7 +25,7 @@ function createDivWithText(text) {
    prepend(document.querySelector('#one'), document.querySelector('#two')) // добавит элемент переданный первым аргументом в начало элемента переданного вторым аргументом
  */
 function prepend(what, where) {
-  where.insertBefore(what, where.firstElementChild);
+  where.insertBefore(what, where.firstChild);
 
   // where.prepend(what); //новый метод DOM4, не везде поддерживается
 }
@@ -53,8 +53,8 @@ function findAllPSiblings(where) {
   const resultArray = [];
 
   for (const elem of where.children) {
-    if (elem.nextElementSibling && elem.nextElementSibling.tagName === 'p') {
-      //если след.эл-т существует и имя его тега "р"
+    if (elem.nextElementSibling && elem.nextElementSibling.tagName === 'P') {
+      //если след.эл-т существует и имя его тега "P", писать с большой буквы!
       resultArray.push(elem);
     }
   }
@@ -110,7 +110,7 @@ function deleteTextNodes(where) {
       i--;
     }
   }
-} // ПОЧЕМУ НЕ НУЖЕН RETURN?
+} // ПОЧЕМУ НЕ НУЖЕН RETURN? -- т.к.нам надо только удалить элементы, возвращать ничего не нужно
 
 /*
  Задание 6:
@@ -131,7 +131,7 @@ function deleteTextNodesRecursive(where) {
       where.removeChild(node);
       i--;
     } else if (node.nodeType === Element.ELEMENT_NODE) {
-      deleteTextNodesRecursive(where); //проваливание на 1 уровень вглубь и проверка по тому же алгоритму
+      deleteTextNodesRecursive(node); //проваливание на 1 уровень вглубь и проверка по тому же алгоритму
     }
   }
 }
